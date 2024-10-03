@@ -1,0 +1,76 @@
+@color-bg-one:color(red );
+@color-bg-two:color(yellow);
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body,html{
+    height: 100%;
+    box-sizing: border-box;
+    .flex()
+}
+
+
+.border{
+    border: 3px solid black;
+}
+.content{
+    .border();
+    width: 80vw;
+    height: 80%;
+      .flex()
+}
+.content-child{
+    width: 80%;
+    height: 30%;
+    .border();
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    @media screen and (max-width: 800px) {
+flex-direction: column;
+justify-content:center ;
+gap: 10px;
+
+        
+    }
+
+  
+}
+.clild1,.clild2{
+    .border();
+display: flex;
+align-items: center;
+    width: 45%;
+    height: 20%;
+    @media screen and ( max-width:800px) {
+        width: 90%;
+        height: 30%;
+        
+    }
+  
+}
+.clild1{
+    background-color: @color-bg-one;
+    padding-left:10px ;
+    justify-content: start;
+    @media  screen and (max-width:400px) {
+
+        justify-content: center;
+        width: 75%;
+        padding: 0;
+    }
+}
+.clild2{
+    background-color: @color-bg-two;
+    padding-right: 10px;
+    justify-content: end;
+    @media  screen and (max-width:400px) {
+
+        justify-content: center;
+        width: 75%;
+        padding: 0;
+    }
+}
